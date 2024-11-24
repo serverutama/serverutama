@@ -1,0 +1,28 @@
+/* Memastikan link dapat diklik */
+.kb-article-link {
+    pointer-events: auto !important; /* Memastikan interaksi aktif */
+    position: relative; /* Hindari masalah posisi */
+    z-index: 10; /* Pastikan berada di atas elemen lain */
+    display: inline-block; /* Beri ruang klik */
+}
+
+/* Pastikan elemen di sekitar tidak menutupi */
+.kbcategories div {
+    overflow: visible !important; /* Pastikan elemen tidak menyembunyikan link */
+    position: relative; /* Hindari konflik posisi */
+}
+
+/* Perbaikan untuk layar kecil */
+@media (max-width: 768px) {
+    .kc-bg-box-container {
+        padding: 10px; /* Beri ruang untuk elemen */
+    }
+    .kbcategories {
+        display: flex;
+        flex-direction: column; /* Atur elemen secara vertikal */
+    }
+    .kb-article-link {
+        font-size: 16px; /* Ukuran font lebih besar */
+        padding: 10px; /* Beri ruang klik tambahan */
+    }
+}
